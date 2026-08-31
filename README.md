@@ -25,5 +25,45 @@ The platform allows users to:
 - Amazon EKS
 - Kubernetes
 - Amazon Bedrock
+
+  ## 🏗️ Architecture
+
+```text
+                    User
+                     │
+                     ▼
+             React Frontend
+                (Vite)
+                     │
+                     │ REST API
+                     ▼
+             FastAPI Backend
+                     │
+                     ▼
+              Amazon Bedrock
+                     │
+                     ▼
+          AI Maintenance Recommendation
+
+
+Deployment Architecture
+
+User
+ │
+ ▼
+Frontend Load Balancer
+ │
+ ▼
+Frontend Pod
+ │
+ ├──────── REST API ────────► Backend Load Balancer
+ │                                  │
+ │                                  ▼
+ │                            Backend Pod
+ │                                  │
+ │                                  ▼
+ │                           Amazon Bedrock
+ │
+ └──────────────────────────────────────
 - AWS IAM
 - GitHub Actions
