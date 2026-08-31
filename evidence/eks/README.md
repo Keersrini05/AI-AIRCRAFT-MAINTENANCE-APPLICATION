@@ -1,1 +1,1 @@
-Amazon EKS cluster deployment evidence.
+Amazon EKS cluster, EKS node group deployment evidence.
