@@ -1,9 +1,11 @@
-name: Deploy AI Aircraft Maintenance Platform
+name: Deploy
 
 on:
   push:
     branches:
       - main
+    paths-ignore:
+      - 'evidence/**'
 
 jobs:
 
